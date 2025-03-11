@@ -1,0 +1,8 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react-hooks/exhaustive-deps": "off", // Disables the exhaustive-deps rule for React hooks
+    "react/no-unescaped-entities": "off", // Disables the rule for unescaped HTML entities
+    "@next/next/no-img-element": "off" // Disables the rule for using <img> instead of <Image />
+  }
+}

@@ -1,0 +1,44 @@
+POST http://54.219.218.149:3000/generate-screenshot
+
+Option 1: Upload HTML File
+Method: POST
+Body: form-data
+Key: htmlFile (choose File type)
+Upload your HTML file and click Send.
+
+Option 2: Send Raw HTML
+Method: POST
+Body: raw JSON
+Example:
+{
+  "htmlContent": "<html><body><h1>Hello, world!</h1></body></html>"
+}
+Click Send.
+
+Option 3: Send Base64 HTML
+Method: POST
+Body: raw JSON
+Example:
+{
+  "htmlContent": "data:text/html;base64,PGh0bWw+PGJvZHk+PGRpdj5IZWxsbywgdGhpcyBpcyBhIHRlc3QgcGFnZTwvZGl2PjwvYm9keT48L2h0bWw+"
+}
+Click Send.
+
+Option 4: Provide URL
+Method: POST
+Body: raw JSON
+Example:
+{
+  "url": "https://example.com"
+}
+Click Send.
+
+Optional: Add Device Type (mobile, tablet, desktop)
+Example:
+{
+  "htmlContent": "<html><body><h1>Hello, world!</h1></body></html>",
+  "device": "mobile"
+}
+Click Send.
+
+Response: A JPEG image will be returned as the screenshot.
